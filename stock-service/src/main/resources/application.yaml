@@ -12,7 +12,7 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
 
-    #This config means kafka consumer can deserialize all the classes from this package
+    #This config means kafka consumer can trust and deserialize all the classes from this package
     properties:
       spring:
         json:
@@ -24,7 +24,7 @@ spring:
       name: order-topics
 
   datasource:
-    url: jdbc:mysql://localhost:3306/stock_order?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+    url: jdbc:mysql://localhost:3306/springbootkafkaeventdrivenmicroservicesdb?createDatabaseIfNotExist=true&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
     username: root
     password: admin
 
