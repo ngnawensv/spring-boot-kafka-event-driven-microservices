@@ -11,7 +11,6 @@ public class OrderEmailConsumer {
     @KafkaListener(topics = "${spring.kafka.topic.name}",groupId = "${spring.kafka.consumer.group-id}")
     public  void consume(OrderEvent orderEvent){
         log.info(String.format("OrderEmailConsumer->consume(): Order event received in email service =>%s", orderEvent.toString()));
-
         // Send an email to the customer
       }
 }
